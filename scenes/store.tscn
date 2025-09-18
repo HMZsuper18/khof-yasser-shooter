@@ -1,0 +1,212 @@
+[gd_scene load_steps=14 format=3 uid="uid://d36mrcmab5qtm"]
+
+[ext_resource type="Shader" uid="uid://bupnbkyenlwn3" path="res://scripts/store.gdshader" id="1_atuvt"]
+[ext_resource type="Script" uid="uid://uojm30y2tmxk" path="res://scripts/store.gd" id="1_dq3y1"]
+[ext_resource type="Texture2D" uid="uid://bd721q1p2afba" path="res://images/Screenshot 2025-09-15 172941.png" id="2_codmc"]
+[ext_resource type="Texture2D" uid="uid://hn3ou8mpkpoq" path="res://images/home_512dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" id="4_5bups"]
+[ext_resource type="AudioStream" uid="uid://diseapps8wxu1" path="res://sounds/click (mp3cut.net).mp3" id="5_gf6f2"]
+[ext_resource type="FontFile" uid="uid://cxyv6y6t14pc8" path="res://scripts/ComicRelief-Bold.ttf" id="6_5bups"]
+[ext_resource type="Texture2D" uid="uid://cpcgp32lsvki4" path="res://images/gesture_select_512dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" id="7_fygda"]
+[ext_resource type="Texture2D" uid="uid://dknqbaq5yuwt" path="res://images/diamond_512dp_BB271A_FILL0_wght400_GRAD0_opsz48.png" id="7_ipyd8"]
+[ext_resource type="Texture2D" uid="uid://cm7bjbnhi7des" path="res://images/ياسر.png" id="7_phafb"]
+[ext_resource type="Texture2D" uid="uid://dg3644ulbibji" path="res://images/image-removebg-preview.png" id="8_q788m"]
+[ext_resource type="Texture2D" uid="uid://btgpd4lgylvls" path="res://images/shan.png" id="8_tmp5q"]
+[ext_resource type="Texture2D" uid="uid://3tgr8yrn3itj" path="res://images/Gemini_Generated_Image_mfzrscmfzrscmfzr-removebg-preview.png" id="10_ipyd8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dq3y1"]
+shader = ExtResource("1_atuvt")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/shine_speed = 1.0
+shader_parameter/shine_frequency = 1.0
+shader_parameter/shine_width = 0.1
+shader_parameter/shine_intensity = 0.5
+shader_parameter/shine_angle = 0.0
+
+[node name="store" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dq3y1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_dq3y1")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_codmc")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 519.0
+offset_bottom = 517.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("4_5bups")
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_gf6f2")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_right = 933.0
+offset_bottom = 79.0
+theme_override_constants/outline_size = 15
+theme_override_constants/side_margin = 5
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 50
+current_tab = 0
+script = ExtResource("1_dq3y1")
+
+[node name="characters" type="Control" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="yasser select" type="Button" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = -216.0
+offset_top = 440.0
+offset_right = 958.0
+offset_bottom = 960.0
+scale = Vector2(0.13, 0.13)
+theme_override_constants/outline_size = 75
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 227
+theme_override_icons/icon = ExtResource("7_fygda")
+text = "select"
+flat = true
+
+[node name="legend" type="Button" parent="TabContainer/characters"]
+visible = false
+layout_mode = 0
+offset_left = 640.0
+offset_top = 435.0
+offset_right = 1814.0
+offset_bottom = 955.0
+scale = Vector2(0.13, 0.13)
+theme_override_constants/outline_size = 75
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 227
+theme_override_icons/icon = ExtResource("7_fygda")
+text = "select"
+flat = true
+
+[node name="shan2" type="Button" parent="TabContainer/characters"]
+visible = false
+layout_mode = 0
+offset_left = 351.0
+offset_top = 433.0
+offset_right = 1525.0
+offset_bottom = 953.0
+scale = Vector2(0.13, 0.13)
+theme_override_constants/outline_size = 75
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 227
+theme_override_icons/icon = ExtResource("7_fygda")
+text = "select"
+flat = true
+
+[node name="3ammer2" type="Button" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 436.0
+offset_right = 1265.0
+offset_bottom = 956.0
+scale = Vector2(0.13, 0.13)
+theme_override_constants/outline_size = 75
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 227
+theme_override_icons/icon = ExtResource("7_fygda")
+text = "select"
+flat = true
+
+[node name="legend gems" type="Button" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = 573.0
+offset_top = 435.0
+offset_right = 2663.0
+offset_bottom = 955.0
+scale = Vector2(0.13, 0.13)
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 227
+text = "buy with gems"
+icon = ExtResource("7_ipyd8")
+flat = true
+
+[node name="shan gems" type="Button" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 437.0
+offset_right = 2369.0
+offset_bottom = 957.0
+scale = Vector2(0.13, 0.13)
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 227
+text = "buy with gems"
+icon = ExtResource("7_ipyd8")
+flat = true
+
+[node name="3ammer gems" type="Button" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 438.0
+offset_right = 2092.0
+offset_bottom = 958.0
+scale = Vector2(0.13, 0.13)
+theme_override_fonts/font = ExtResource("6_5bups")
+theme_override_font_sizes/font_size = 227
+text = "buy with gems"
+icon = ExtResource("7_ipyd8")
+flat = true
+
+[node name="yasser" type="TextureRect" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = -293.0
+offset_top = 76.0
+offset_right = 162.0
+offset_bottom = 625.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_phafb")
+
+[node name="3ammer" type="TextureRect" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = -46.0
+offset_top = 77.0
+offset_right = 754.0
+offset_bottom = 877.0
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("8_q788m")
+
+[node name="shan" type="TextureRect" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 33.0
+offset_right = 2000.0
+offset_bottom = 1450.0
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("8_tmp5q")
+
+[node name="legand" type="TextureRect" parent="TabContainer/characters"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 29.0
+offset_right = 969.0
+offset_bottom = 498.0
+texture = ExtResource("10_ipyd8")
+
+[node name="weapons" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="gems" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

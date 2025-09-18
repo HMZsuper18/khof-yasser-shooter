@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://bjqjejayx5ipg"]
+
+[ext_resource type="Texture2D" uid="uid://jhq8jmw65eg2" path="res://images/Screenshot_2025-09-08_200048-removebg-preview.png" id="1_3n500"]
+[ext_resource type="Script" uid="uid://pllfec5oicjc" path="res://scripts/sign_in.gd" id="1_22ad8"]
+[ext_resource type="Texture2D" uid="uid://bl0tk3kqnk1dx" path="res://images/Screenshot_2025-09-08_200106-removebg-preview.png" id="2_22ad8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eh4yf"]
+bg_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3n500"]
+texture = ExtResource("1_3n500")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktk1f"]
+texture = ExtResource("2_22ad8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsmva"]
+texture = ExtResource("1_3n500")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22ad8"]
+bg_color = Color(0.372781, 0.567669, 1, 1)
+shadow_color = Color(0, 0, 0, 0.588235)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjd6u"]
+bg_color = Color(0, 0.1837, 0.999999, 1)
+shadow_color = Color(0, 0, 0, 0.509804)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3n500"]
+bg_color = Color(0.122313, 0.358631, 1, 1)
+shadow_color = Color(0, 0, 0, 0.627451)
+shadow_size = 25
+
+[node name="sign in" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_22ad8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eh4yf")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 244.0
+offset_right = 810.0
+offset_bottom = 309.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_3n500")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ktk1f")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xsmva")
+metadata/_edit_group_ = true
+
+[node name="password" type="LineEdit" parent="Panel"]
+layout_mode = 2
+offset_left = 331.0
+offset_top = 244.0
+offset_right = 710.0
+offset_bottom = 307.0
+theme_override_colors/font_placeholder_color = Color(0.741385, 0.741385, 0.741385, 1)
+theme_override_font_sizes/font_size = 40
+placeholder_text = "password"
+secret = true
+secret_character = "*"
+metadata/_edit_group_ = true
+
+[node name="email" type="LineEdit" parent="Panel"]
+layout_mode = 2
+offset_left = 331.0
+offset_top = 153.0
+offset_right = 791.0
+offset_bottom = 215.0
+theme_override_colors/font_placeholder_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_font_sizes/font_size = 40
+placeholder_text = "E-mail"
+text_direction = 1
+language = "en"
+
+[node name="name enter" type="LineEdit" parent="Panel"]
+layout_mode = 2
+offset_left = 331.0
+offset_top = 339.0
+offset_right = 791.0
+offset_bottom = 402.0
+theme_override_colors/font_placeholder_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_font_sizes/font_size = 40
+placeholder_text = "name"
+text_direction = 1
+language = "en"
+
+[node name="sign in" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 229.0
+offset_top = 493.0
+offset_right = 496.0
+offset_bottom = 573.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ad8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rjd6u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3n500")
+text = "sign in"
+
+[node name="FirebaseAuthRequest" type="HTTPRequest" parent="."]
+
+[connection signal="button_down" from="Panel/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Panel/Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Panel/sign in" to="." method="_on_sign_in_pressed"]

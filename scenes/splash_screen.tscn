@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqs1ccxce6jfc"]
+
+[ext_resource type="Script" uid="uid://cxyshdd0a211q" path="res://scripts/splash_screen.gd" id="1_hsxvm"]
+[ext_resource type="Texture2D" uid="uid://1uauit2tgl8d" path="res://images/splash screen.png" id="1_n4g2v"]
+
+[sub_resource type="Animation" id="Animation_4gp4q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hsxvm"]
+resource_name = "splash screen"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.3, 2.7, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.345098, 0.345098, 0.345098, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.34902, 0.34902, 0.34902, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3mj2l"]
+_data = {
+&"RESET": SubResource("Animation_4gp4q"),
+&"splash screen": SubResource("Animation_hsxvm")
+}
+
+[node name="splash screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hsxvm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 40.046
+scale = Vector2(18.58, 16.181)
+texture = ExtResource("1_n4g2v")
+expand_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3mj2l")
+}

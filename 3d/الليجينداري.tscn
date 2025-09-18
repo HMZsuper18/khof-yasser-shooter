@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3iu7w5ug4qji"]
+
+[ext_resource type="PackedScene" uid="uid://dcij2udp4b06a" path="res://3d/ياسر.glb" id="1_qtdbr"]
+[ext_resource type="PackedScene" uid="uid://drc87xps6ftur" path="res://3d/cigarette_-_daily3d.glb" id="2_l1514"]
+[ext_resource type="PackedScene" uid="uid://b1o6w2qwg4cxr" path="res://3d/minecraft_thug_life_gold_chain.glb" id="3_b7ah5"]
+[ext_resource type="PackedScene" uid="uid://bk5laa2e420n1" path="res://3d/pixel_artvoxel_art_deal_with_it_glasses.glb" id="4_jkjpg"]
+
+[node name="الليجينداري" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_qtdbr")]
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("2_l1514")]
+transform = Transform3D(-2.18557e-06, 3.46945e-16, -50, 0.0349066, 50, -1.52582e-09, 50, -0.0349066, -2.18557e-06, 382.09, -79.14, 7.825)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("3_b7ah5")]
+transform = Transform3D(-3.44009e-07, 0, 7.87, 0, 7.87, 0, -7.87, 0, -3.44009e-07, -3.13533, -6.70194, 3.05253)
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("4_jkjpg")]
+transform = Transform3D(1.11839, 0, 1.55445, 0, 2.86, 0, -1.65808, 0, 1.04849, -29.93, 5.526, 72.497)

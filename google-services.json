@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "537622705263",
+    "project_id": "khof-yasser-shooter-database",
+    "storage_bucket": "khof-yasser-shooter-database.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537622705263:android:08de5aff3a401c0fdd099a",
+        "android_client_info": {
+          "package_name": "com.HMZgames.KhofYasserShooter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537622705263-36nfh6lo43jh2a29dadlte50tv4rb3hi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.HMZgames.KhofYasserShooter",
+            "certificate_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+          }
+        },
+        {
+          "client_id": "537622705263-4i5foeqd51uovhpn6luuedd82gptohgd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4noTvXHgefHlf9M400WgeE0pf3E-ageM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537622705263-4i5foeqd51uovhpn6luuedd82gptohgd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "537622705263-690k74l2ucvhvva15gmuk1qg1jb9t08v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HMZgames.KhofYasserShooter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
