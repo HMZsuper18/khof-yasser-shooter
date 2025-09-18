@@ -1,3 +1,18 @@
-# Godot 4+ specific ignores
+# Godot-specific ignores
+# The .godot folder is the new cache directory in Godot 4+
 .godot/
+
+# Ignore Android build folder
 /android/
+
+# Godot export and build files
+.nomedia
+*.translation
+.import/
+export.cfg
+export_credentials.cfg
+
+# Mono-specific ignores (for C# projects)
+.mono/
+data_*/
+mono_crash.*.json
