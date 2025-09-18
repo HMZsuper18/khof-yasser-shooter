@@ -66,3 +66,4 @@ func _on_http_request_completed(_result, response_code: int, _headers, body: Pac
 		GameSettings.gems = GameSettings.gems + 300
 		GameSettings.active_character = "" # أو أي قيمة ترجع ليها
 #هاي جماعة الخير
+#مسا مسا
