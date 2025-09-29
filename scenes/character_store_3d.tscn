@@ -1,0 +1,444 @@
+[gd_scene load_steps=20 format=4 uid="uid://ex7fhlrl86px"]
+
+[ext_resource type="Texture2D" uid="uid://gelj4b6ikf2s" path="res://3d/character shop world/3d_pixel_oak_log_0.png" id="1_01qmt"]
+[ext_resource type="Script" uid="uid://dtaogfp85evsn" path="res://scripts/character_store_3d.gd" id="1_usqau"]
+[ext_resource type="PackedScene" uid="uid://dpkcgatv7nynw" path="res://3d/character shop world/minecraft_flat_world.glb" id="2_cgiol"]
+[ext_resource type="PackedScene" uid="uid://maukttjv08xd" path="res://3d/character shop world/minecraft_3d_oak_planks.glb" id="2_jr13b"]
+[ext_resource type="PackedScene" uid="uid://b3iu7w5ug4qji" path="res://3d/الليجينداري.tscn" id="4_sxlus"]
+[ext_resource type="PackedScene" uid="uid://bylg5q2e2pi4i" path="res://3d/character shop world/mountain_terrain.glb" id="4_uwusk"]
+[ext_resource type="PackedScene" uid="uid://da5xrebe7c32j" path="res://3d/بروستي شان.glb" id="5_y1n3a"]
+[ext_resource type="PackedScene" uid="uid://bqif7x460xxee" path="res://3d/عامر.glb" id="6_uwusk"]
+[ext_resource type="PackedScene" uid="uid://dcij2udp4b06a" path="res://3d/ياسر.glb" id="7_y1n3a"]
+[ext_resource type="PackedScene" uid="uid://d0eailser3ggj" path="res://scenes/charcter_store.tscn" id="10_8xt15"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jr13b"]
+
+[sub_resource type="Sky" id="Sky_wyopu"]
+sky_material = SubResource("ProceduralSkyMaterial_jr13b")
+
+[sub_resource type="Environment" id="Environment_01qmt"]
+background_mode = 2
+sky = SubResource("Sky_wyopu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfkx0"]
+resource_name = "basic_m"
+cull_mode = 2
+albedo_texture = ExtResource("1_01qmt")
+roughness = 0.762411
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7txsh"]
+_surfaces = [{
+"aabb": AABB(-0.19999999, -0.1875, -0.5, 0.39999998, 0.375, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "basic_m",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2k8s5"]
+resource_name = "Sketchfab_Scene_Object_0"
+_surfaces = [{
+"aabb": AABB(-0.19999999, -0.1875, -0.5, 0.39999998, 0.375, 1),
+"attribute_data": PackedByteArray("/4//xwAA/4//j/+PAAD/x/+v/zf/dwAA/68AAP93/zcAAP///4//xwAA/8f/j////3f/b/+v/zf/d/83/6//b/93AAD/N/+P/zcAAP93/48AAAAA/zf/j/83AAAAAP+P"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_qfkx0"),
+"name": "basic_m",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP///78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAAAA////////AAD/////AAAAAP//AAD//wAA//8AAP//AAAAAP////8AAP///////wAAAAAAAP//AAAAAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAAAAAAD/////AAAAAP//AAAAAP///////wAA/3////9/////f////3////9/////f////3////9/////v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7txsh")
+
+[sub_resource type="Animation" id="Animation_usqau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("الليجينداري:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_Scene:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sketchfab_Scene2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.76932365, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sketchfab_Scene4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uwusk"]
+resource_name = "rotation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("الليجينداري:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_Scene:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sketchfab_Scene2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.76932365, 0), Vector3(0, 7.0528755, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sketchfab_Scene4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xt15"]
+_data = {
+&"RESET": SubResource("Animation_usqau"),
+&"rotation": SubResource("Animation_uwusk")
+}
+
+[node name="character store 3d" type="Node3D"]
+script = ExtResource("1_usqau")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.38637298, 0.92234266, 0, -0.92234266, 0.38637298, -0.7126155, 8.710346, 6.202737)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_01qmt")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.99254614, 0.12186935, 0, -0.12186935, 0.99254614, -1.755, 6.798, 10.218)
+fov = 44.477886
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("2_cgiol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.157737, 0.5319413, -1.4116112)
+
+[node name="building" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.3119545, -2.5422986, 0)
+
+[node name="Sketchfab_Scene" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -4.537662, 3.0203109, -1.3436611)
+
+[node name="Sketchfab_Scene15" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -5.4527245, 4.4997387, -1.3793743)
+
+[node name="Sketchfab_Scene16" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -4.5516005, 4.4997387, -1.3793743)
+
+[node name="Sketchfab_Scene17" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -3.6418414, 4.4997387, -1.3793743)
+
+[node name="Sketchfab_Scene18" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -2.7571325, 4.4997387, -1.3793743)
+
+[node name="Sketchfab_Scene19" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -1.8369608, 4.4997387, -1.3793743)
+
+[node name="Sketchfab_Scene20" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -1.7147369, 4.4997387, -1.3793743)
+
+[node name="Sketchfab_Scene2" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -4.97647, 3.2292752, -0.2750494)
+
+[node name="Sketchfab_Scene21" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -5.3728657, 4.5603104, -0.2750494)
+
+[node name="Sketchfab_Scene22" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -4.386847, 4.5603104, -0.2750494)
+
+[node name="Sketchfab_Scene23" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -3.4572365, 4.5603104, -0.2750494)
+
+[node name="Sketchfab_Scene24" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -2.501272, 4.5603104, -0.2750494)
+
+[node name="Sketchfab_Scene25" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -1.7380824, 4.5603104, -0.2750494)
+
+[node name="Sketchfab_Scene13" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -3.558144, 3.2292752, -0.30762535)
+
+[node name="Sketchfab_Scene14" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.065, 0, 0, 0, 0.03, 0, 0, 0, 0.08, -2.1603813, 3.2292752, -0.3143056)
+
+[node name="Sketchfab_Scene7" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -5.4834743, 3.0203109, -1.3436611)
+
+[node name="Sketchfab_Scene3" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -1.6882973, 3.0203109, -1.3339128)
+
+[node name="Sketchfab_Scene4" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -2.6157148, 3.0203109, -1.3438127)
+
+[node name="Sketchfab_Scene5" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -1.7040482, 4.0134034, -1.3701943)
+
+[node name="Sketchfab_Scene10" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -5.3703895, 4.0134034, -1.3701943)
+
+[node name="Sketchfab_Scene26" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -3.618989, 5.3186316, -1.3701943)
+
+[node name="Sketchfab_Scene12" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -5.456726, 4.0134034, -1.3701943)
+
+[node name="Sketchfab_Scene11" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -4.4602633, 4.0134034, -1.3701943)
+
+[node name="Sketchfab_Scene8" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -3.4915378, 4.0134034, -1.3701943)
+
+[node name="Sketchfab_Scene9" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -2.6291277, 4.0134034, -1.3701943)
+
+[node name="Sketchfab_Scene6" parent="building" instance=ExtResource("2_jr13b")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -3.5946975, 3.0203109, -1.3543601)
+
+[node name="tower" type="Node3D" parent="building"]
+
+[node name="Sketchfab_Scene2" type="Node3D" parent="building/tower"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 2.9831538, 0.15791744)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower/Sketchfab_Scene2"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower/Sketchfab_Scene2/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower/Sketchfab_Scene2/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="Sketchfab_Scene4" type="Node3D" parent="building/tower"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 3.9481063, 0.17224002)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower/Sketchfab_Scene4"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower/Sketchfab_Scene4/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower/Sketchfab_Scene4/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="tower2" type="Node3D" parent="building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3615906, 0, 0)
+
+[node name="Sketchfab_Scene2" type="Node3D" parent="building/tower2"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 2.9831538, 0.15791744)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower2/Sketchfab_Scene2"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower2/Sketchfab_Scene2/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower2/Sketchfab_Scene2/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower2/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower2/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="Sketchfab_Scene4" type="Node3D" parent="building/tower2"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 3.9481063, 0.17224002)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower2/Sketchfab_Scene4"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower2/Sketchfab_Scene4/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower2/Sketchfab_Scene4/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower2/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower2/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="tower3" type="Node3D" parent="building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7212796, 0, 0)
+
+[node name="Sketchfab_Scene2" type="Node3D" parent="building/tower3"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 2.9831538, 0.15791744)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower3/Sketchfab_Scene2"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower3/Sketchfab_Scene2/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower3/Sketchfab_Scene2/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower3/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower3/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="Sketchfab_Scene4" type="Node3D" parent="building/tower3"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 3.9481063, 0.17224002)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower3/Sketchfab_Scene4"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower3/Sketchfab_Scene4/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower3/Sketchfab_Scene4/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower3/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower3/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="tower4" type="Node3D" parent="building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.132142, 0, 0)
+
+[node name="Sketchfab_Scene2" type="Node3D" parent="building/tower4"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 2.9831538, 0.15791744)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower4/Sketchfab_Scene2"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower4/Sketchfab_Scene2/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower4/Sketchfab_Scene2/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower4/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower4/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="Sketchfab_Scene4" type="Node3D" parent="building/tower4"]
+transform = Transform3D(1, 0, 0, 0, 0.012635805, 0.9999202, 0, -0.9999202, 0.012635805, -1.5355384, 3.9481063, 0.17224002)
+
+[node name="Sketchfab_model" type="Node3D" parent="building/tower4/Sketchfab_Scene4"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="building/tower4/Sketchfab_Scene4/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Node3D" parent="building/tower4/Sketchfab_Scene4/Sketchfab_model/root"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, -1, 0, 1, 2.220446e-16, 0, 0, 0)
+
+[node name="Cube_1" type="Node3D" parent="building/tower4/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Object_4" type="MeshInstance3D" parent="building/tower4/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode/Cube_1"]
+mesh = SubResource("ArrayMesh_2k8s5")
+skeleton = NodePath("")
+
+[node name="Sketchfab_Scene27" parent="building" instance=ExtResource("4_uwusk")]
+transform = Transform3D(19.748625, 0, 98.03056, 0, 100, 0, -98.03056, 0, 19.748625, 35.745, -21.59, -71.94)
+
+[node name="الليجينداري" parent="." instance=ExtResource("4_sxlus")]
+transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, -1.8752724, 8.102829, 0)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("5_y1n3a")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.93216884, 5.229596, 0)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("6_uwusk")]
+transform = Transform3D(0.4633559, 0, 0.44869387, 0, 0.6449999, 0, -0.44869387, 0, 0.4633559, -1.7630224, 4.491497, 0)
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("7_y1n3a")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -4.624708, 5.228636, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8xt15")
+}
+
+[node name="charcter store" parent="." instance=ExtResource("10_8xt15")]

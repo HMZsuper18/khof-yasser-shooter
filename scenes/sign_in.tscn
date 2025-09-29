@@ -1,25 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjqjejayx5ipg"]
+[gd_scene load_steps=12 format=3 uid="uid://bjqjejayx5ipg"]
 
 [ext_resource type="Texture2D" uid="uid://jhq8jmw65eg2" path="res://images/Screenshot_2025-09-08_200048-removebg-preview.png" id="1_3n500"]
 [ext_resource type="Script" uid="uid://pllfec5oicjc" path="res://scripts/sign_in.gd" id="1_22ad8"]
 [ext_resource type="Texture2D" uid="uid://bl0tk3kqnk1dx" path="res://images/Screenshot_2025-09-08_200106-removebg-preview.png" id="2_22ad8"]
+[ext_resource type="Texture2D" uid="uid://c7kbaplhpksg8" path="res://images/play-button.png" id="4_ktk1f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eh4yf"]
 bg_color = Color(1, 1, 1, 1)
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3n500"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsmva"]
 texture = ExtResource("1_3n500")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktk1f"]
 texture = ExtResource("2_22ad8")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsmva"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3n500"]
 texture = ExtResource("1_3n500")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22ad8"]
-bg_color = Color(0.372781, 0.567669, 1, 1)
-shadow_color = Color(0, 0, 0, 0.588235)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3n500"]
+bg_color = Color(0.122313, 0.358631, 1, 1)
+shadow_color = Color(0, 0, 0, 0.627451)
 shadow_size = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjd6u"]
@@ -27,9 +28,9 @@ bg_color = Color(0, 0.1837, 0.999999, 1)
 shadow_color = Color(0, 0, 0, 0.509804)
 shadow_size = 25
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3n500"]
-bg_color = Color(0.122313, 0.358631, 1, 1)
-shadow_color = Color(0, 0, 0, 0.627451)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22ad8"]
+bg_color = Color(0.372781, 0.567669, 1, 1)
+shadow_color = Color(0, 0, 0, 0.588235)
 shadow_size = 25
 
 [node name="sign in" type="Control"]
@@ -53,13 +54,13 @@ offset_left = 711.0
 offset_top = 244.0
 offset_right = 810.0
 offset_bottom = 309.0
-theme_override_styles/hover = SubResource("StyleBoxTexture_3n500")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_ktk1f")
 theme_override_styles/normal = SubResource("StyleBoxTexture_xsmva")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ktk1f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3n500")
 metadata/_edit_group_ = true
 
 [node name="password" type="LineEdit" parent="Panel"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 331.0
 offset_top = 244.0
 offset_right = 710.0
@@ -72,7 +73,7 @@ secret_character = "*"
 metadata/_edit_group_ = true
 
 [node name="email" type="LineEdit" parent="Panel"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 331.0
 offset_top = 153.0
 offset_right = 791.0
@@ -84,7 +85,7 @@ text_direction = 1
 language = "en"
 
 [node name="name enter" type="LineEdit" parent="Panel"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 331.0
 offset_top = 339.0
 offset_right = 791.0
@@ -96,19 +97,31 @@ text_direction = 1
 language = "en"
 
 [node name="sign in" type="Button" parent="Panel"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 229.0
 offset_top = 493.0
 offset_right = 496.0
 offset_bottom = 573.0
 theme_override_font_sizes/font_size = 50
-theme_override_styles/hover = SubResource("StyleBoxFlat_22ad8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_rjd6u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3n500")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rjd6u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ad8")
 text = "sign in"
 
 [node name="FirebaseAuthRequest" type="HTTPRequest" parent="."]
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 136.00006
+offset_top = 137.00003
+offset_right = 656.00006
+offset_bottom = 657.0
+rotation = -3.142215
+scale = Vector2(0.26, 0.26)
+icon = ExtResource("4_ktk1f")
+flat = true
+
 [connection signal="button_down" from="Panel/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Panel/Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Panel/sign in" to="." method="_on_sign_in_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

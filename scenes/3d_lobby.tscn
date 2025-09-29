@@ -347,10 +347,10 @@ tracks/2/path = NodePath("characters/broasty:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(10),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [false, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -439,7 +439,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../shotgun/shotgun:visible")
+tracks/4/path = NodePath("shotgun/shotgun:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -475,7 +475,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../shotgun:rotation")
+tracks/7/path = NodePath("shotgun:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -540,7 +540,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../shotgun/shotgun:visible")
+tracks/4/path = NodePath("shotgun/shotgun:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -581,7 +581,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../shotgun/shotgun:visible")
+tracks/2/path = NodePath("shotgun/shotgun:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -658,7 +658,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../shotgun/shotgun:visible")
+tracks/3/path = NodePath("shotgun/shotgun:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -670,7 +670,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../shotgun:rotation")
+tracks/4/path = NodePath("shotgun:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -735,7 +735,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../shotgun/shotgun:visible")
+tracks/4/path = NodePath("shotgun/shotgun:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -820,9 +820,9 @@ visible = false
 transform = Transform3D(-0.0484636, 0, 0.141955, 0, 0.15, 0, -0.141955, 0, -0.0484636, -11.6064, 4.74692, -48.0729)
 visible = false
 
-[node name="shotgun" type="Node3D" parent="."]
+[node name="shotgun" type="Node3D" parent="weapons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9582, 0, -46.0473)
 
-[node name="shotgun" parent="shotgun" instance=ExtResource("11_1yxpn")]
+[node name="shotgun" parent="weapons/shotgun" instance=ExtResource("11_1yxpn")]
 transform = Transform3D(0.0276981, 0, 0.0115245, 0, 0.03, 0, -0.0115245, 0, 0.0276981, -0.51244, 5.34014, 1.41343)
 visible = false

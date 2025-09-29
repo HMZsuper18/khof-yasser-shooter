@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0eailser3ggj"]
+
+[ext_resource type="Texture2D" uid="uid://irjw6xhl078m" path="res://images/payment.png" id="1_gtm8d"]
+[ext_resource type="Script" uid="uid://cquxqygrvcja7" path="res://scripts/charcter_store.gd" id="1_wgj65"]
+[ext_resource type="FontFile" uid="uid://c57a66hlbsh42" path="res://scripts/Minecraftia-Regular.ttf" id="2_7slni"]
+[ext_resource type="Texture2D" uid="uid://bjf3jxhg4ltkg" path="res://images/select.png" id="3_7slni"]
+
+[node name="charcter store" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wgj65")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 470.0
+offset_top = 355.0
+offset_right = 510.0
+offset_bottom = 395.0
+scale = Vector2(0.4, 0.4)
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 508.0
+icon = ExtResource("1_gtm8d")
+flat = true
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 205.0
+offset_right = 384.0
+offset_bottom = 345.0
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_7slni")
+theme_override_font_sizes/font_size = 80
+text = "300"
+
+[node name="Control2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 695.0
+offset_top = 357.0
+offset_right = 735.0
+offset_bottom = 397.0
+scale = Vector2(0.4, 0.4)
+
+[node name="500" type="Button" parent="Control2"]
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 508.0
+icon = ExtResource("1_gtm8d")
+flat = true
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 205.0
+offset_right = 384.0
+offset_bottom = 345.0
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_7slni")
+theme_override_font_sizes/font_size = 80
+text = "500"
+
+[node name="Control3" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 470.0
+offset_top = 140.0
+offset_right = 510.0
+offset_bottom = 180.00003
+scale = Vector2(0.4, 0.4)
+
+[node name="الحياة" type="Button" parent="Control3"]
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 508.0
+icon = ExtResource("1_gtm8d")
+flat = true
+
+[node name="Label" type="Label" parent="Control3"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 200.0
+offset_right = 425.0
+offset_bottom = 340.0
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_7slni")
+theme_override_font_sizes/font_size = 80
+text = "1000"
+
+[node name="Control4" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 355.0
+offset_right = 280.00006
+offset_bottom = 395.00003
+scale = Vector2(0.4, 0.4)
+
+[node name="Button" type="Button" parent="Control4"]
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 508.0
+icon = ExtResource("3_7slni")
+flat = true
+
+[node name="Label" type="Label" parent="Control4"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 208.24
+offset_right = 437.0
+offset_bottom = 322.9001
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_7slni")
+theme_override_font_sizes/font_size = 65
+text = "select"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control2/500" to="." method="_on__pressed"]
+[connection signal="pressed" from="Control3/الحياة" to="." method="_on_الحياة_pressed"]

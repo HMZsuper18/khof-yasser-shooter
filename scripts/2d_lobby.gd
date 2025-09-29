@@ -4,7 +4,7 @@ extends Control
 
 func _ready() -> void:
 	$AnimationPlayer.play("fade in")
-	
+	$TextureRect/AnimationPlayer.play("jumping")
 	# نوصل بالإشارة اللي هتتبعت من الـ splash screen
 	var splash_screen_node = get_tree().get_root().find_child("splash_screen", true)
 	if splash_screen_node:
@@ -33,19 +33,16 @@ func _on_animation_finished(_anim_name: String):
 func _on_store_pressed():
 	$AudioStreamPlayer.play()
 	$"store/store pressed".play("store pressed")
-	$AudioStreamPlayer.finished.connect(_on_sound2_finished)
-
-func _on_sound2_finished():
 	$AnimationPlayer.play("fade out")
-	$AnimationPlayer.animation_finished.connect(_on_animation2_finished)
+	$AnimationPlayer.animation_finished.connect(_on_animation1_finished)
 
-func _on_animation2_finished(_anim_name: String):
-	get_tree().change_scene_to_file("res://scenes/store.tscn")
+func _on_animation1_finished(_anim_name: String):
+	get_tree().change_scene_to_file("res://scenes/character_store_3d.tscn")
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/sign_in.tscn")
 	self.hide()
 	$Button.disabled = true
+	get_tree().change_scene_to_file("res://scenes/sign_in.tscn")
 
 func update_gems_display() -> void:
 	my_label.text = str(GameSettings.gems)
