@@ -8,6 +8,7 @@ const FIRESTORE_URL = "https://firestore.googleapis.com/v1/projects/khof-yasser-
 const FIREBASE_AUTH_DOMAIN = "khof-yasser-shooter-database.firebaseapp.com"
 
 
+var eight_digit_number: int = randi_range(10000000, 99999999)
 var http_request = HTTPRequest.new()
 var is_signing_up = false
 var user_id = ""
@@ -19,18 +20,15 @@ func _ready():
 	add_child(http_request)
 	http_request.request_completed.connect(_on_request_completed)
 
-
 func _on_sign_in_pressed() -> void:
 	var email = $Panel/email.text
 	var password = $Panel/password.text
-	var player_name = $"Panel/name enter".text # تم تغيير "name" إلى "player_name"
+	var player_name = $"Panel/name enter".text
 	
-	if email.is_empty() or password.is_empty() or player_name.is_empty(): # استخدام "player_name"
-		print("الرجاء إدخال الإيميل وكلمة المرور والاسم.")
+	if email.is_empty() or password.is_empty() or player_name.is_empty():
 		return
 
 	is_signing_up = false
-	print("جاري تسجيل الدخول...")
 
 	var auth_url = FIREBASE_SIGNIN_URL + FIREBASE_API_KEY
 	
@@ -44,21 +42,18 @@ func _on_sign_in_pressed() -> void:
 	var body_json = JSON.stringify(request_body)
 	http_request.request(auth_url, headers, HTTPClient.METHOD_POST, body_json)
 
-
 func _on_request_completed(_result, response_code: int, _headers, body: PackedByteArray) -> void:
 	var response_body = body.get_string_from_utf8()
 	var json_data = JSON.parse_string(response_body)
 
 	if response_code == 200:
 		if "idToken" in json_data and "localId" in json_data:
-			user_id = json_data.localId
+			user_id = eight_digit_number
 			user_token = json_data.idToken
 			
-			# هنا هنطبع الـuser_id بعد ما ييجي من Firebase
 			print("1. User ID from Firebase auth: ", user_id)
 			
 			GameSettings.user_id = user_id
-			GameSettings.save_settings()
 			
 			if is_signing_up:
 				create_user_document()
@@ -119,37 +114,14 @@ func create_user_document():
 	
 	var initial_data = {
 		"fields": {
-			"active_character": {"stringValue": "yasser"},
-			"active_weapon": {"stringValue": "pistol"},
-			"gems": {"integerValue": "0"},
 			"level": {"integerValue": "1"},
 			"name": {"stringValue": name_from_line_edit},
-			"skins": {
-				"mapValue": {
-					"fields": {
-						"3ammer": {"booleanValue": false},
-						"broasty_shan": {"booleanValue": false},
-						"legendary_yasser": {"booleanValue": false},
-						"yasser": {"booleanValue": true}
-					}
-				}
-			},
-			"weapons": {
-				"mapValue": {
-					"fields": {
-						"pistol": {"booleanValue": true},
-						"vector": {"booleanValue": false},
-						"shotgun": {"booleanValue": false},
-						"AK_47": {"booleanValue": false},
-					}
-				}
-			}
 		}
 	}
 	
 	var body_json = JSON.stringify(initial_data)
 	
-	var firestore_url_with_id = FIRESTORE_URL + "?documentId=" + user_id
+	var firestore_url_with_id = FIRESTORE_URL + "?documentId=" + str(user_id)
 	
 	firestore_request.request(firestore_url_with_id, headers, HTTPClient.METHOD_POST, body_json)
 	

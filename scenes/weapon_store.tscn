@@ -1,4 +1,74 @@
-[gd_scene format=3 uid="uid://djm00gf7dwv55"]
+[gd_scene load_steps=14 format=3 uid="uid://djm00gf7dwv55"]
+
+[ext_resource type="Script" uid="uid://bl4pt6ju0syds" path="res://scripts/weapon_store.gd" id="1_yl2yo"]
+[ext_resource type="Texture2D" uid="uid://irjw6xhl078m" path="res://images/payment.png" id="2_uaog8"]
+[ext_resource type="FontFile" uid="uid://c57a66hlbsh42" path="res://scripts/Minecraftia-Regular.ttf" id="3_lq74d"]
+[ext_resource type="Texture2D" uid="uid://bjf3jxhg4ltkg" path="res://images/select.png" id="4_7lsec"]
+[ext_resource type="FontFile" uid="uid://cxyv6y6t14pc8" path="res://scripts/ComicRelief-Bold.ttf" id="5_f1sw3"]
+[ext_resource type="Shader" uid="uid://tur1kfsijsto" path="res://scripts/gems.gdshader" id="6_e4lww"]
+[ext_resource type="Texture2D" uid="uid://b3pps6fu1j15y" path="res://images/images-removebg-preview.png" id="7_6yom2"]
+[ext_resource type="Texture2D" uid="uid://hn3ou8mpkpoq" path="res://images/home_512dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" id="8_tmobs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xrhpy"]
+shader = ExtResource("6_e4lww")
+shader_parameter/glow_intensity = 0.5
+shader_parameter/glow_speed = 2.0
+
+[sub_resource type="Animation" id="Animation_cjo5n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1040, 20)]
+}
+
+[sub_resource type="Animation" id="Animation_dctgn"]
+resource_name = "jumping"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1040, 20), Vector2(1040, -20), Vector2(1040, 20)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_isjer"]
+_data = {
+&"RESET": SubResource("Animation_cjo5n"),
+&"jumping": SubResource("Animation_dctgn")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yl2yo"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+border_width_left = 18
+border_width_top = 18
+border_width_right = 18
+border_width_bottom = 18
+border_color = Color(0.39607844, 0.8, 0.8, 1)
+border_blend = true
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 5
 
 [node name="weapon store" type="Control"]
 layout_mode = 3
@@ -7,3 +77,171 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yl2yo")
+
+[node name="ak47" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 470.0
+offset_top = 355.0
+offset_right = 510.0
+offset_bottom = 395.0
+scale = Vector2(0.4, 0.4)
+
+[node name="ak47" type="Button" parent="ak47"]
+layout_mode = 0
+offset_left = -12.5
+offset_right = 495.5
+offset_bottom = 508.0
+scale = Vector2(1.09, 1)
+icon = ExtResource("2_uaog8")
+flat = true
+
+[node name="Label" type="Label" parent="ak47"]
+custom_minimum_size = Vector2(85, 50)
+layout_mode = 0
+offset_left = 180.00006
+offset_top = 205.0
+offset_right = 360.00006
+offset_bottom = 345.0
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_lq74d")
+theme_override_font_sizes/font_size = 80
+text = "500"
+
+[node name="auto" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 695.0
+offset_top = 357.0
+offset_right = 735.0
+offset_bottom = 397.0
+scale = Vector2(0.4, 0.4)
+
+[node name="victor" type="Button" parent="auto"]
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 508.0
+scale = Vector2(1.09, 1)
+icon = ExtResource("2_uaog8")
+flat = true
+
+[node name="Label" type="Label" parent="auto"]
+custom_minimum_size = Vector2(85, 50)
+layout_mode = 0
+offset_left = 179.0
+offset_top = 205.0
+offset_right = 359.0
+offset_bottom = 345.0
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_lq74d")
+theme_override_font_sizes/font_size = 80
+text = "750"
+
+[node name="shotgun" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 470.0
+offset_top = 140.0
+offset_right = 510.0
+offset_bottom = 180.00003
+scale = Vector2(0.4, 0.4)
+
+[node name="shotgun" type="Button" parent="shotgun"]
+custom_minimum_size = Vector2(85, 50)
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 508.0
+scale = Vector2(1.09, 1)
+icon = ExtResource("2_uaog8")
+flat = true
+
+[node name="Label" type="Label" parent="shotgun"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 200.0
+offset_right = 425.0
+offset_bottom = 340.0
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_lq74d")
+theme_override_font_sizes/font_size = 80
+text = "1200"
+
+[node name="pistol" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 355.0
+offset_right = 280.00006
+offset_bottom = 395.00003
+scale = Vector2(0.4, 0.4)
+
+[node name="pistol" type="Button" parent="pistol"]
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 508.0
+scale = Vector2(1.09, 1)
+icon = ExtResource("4_7lsec")
+flat = true
+
+[node name="Label" type="Label" parent="pistol"]
+layout_mode = 0
+offset_left = 177.50003
+offset_top = 208.23999
+offset_right = 429.50003
+offset_bottom = 322.9001
+theme_override_colors/font_outline_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_lq74d")
+theme_override_font_sizes/font_size = 65
+text = "select"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 821.0
+offset_top = 2.0
+offset_right = 1157.0
+offset_bottom = 156.0
+theme_override_colors/font_color = Color(0.999859, 0.378156, 0.310218, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("5_f1sw3")
+theme_override_font_sizes/font_size = 65
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_xrhpy")
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 20.0
+offset_right = 1265.0
+offset_bottom = 245.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_6yom2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_isjer")
+}
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.00001
+offset_top = -4.00001
+offset_right = 522.0
+offset_bottom = 516.0
+scale = Vector2(0.22, 0.22)
+icon = ExtResource("8_tmobs")
+flat = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 235.0
+offset_right = 438.0
+offset_bottom = 425.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yl2yo")
+
+[connection signal="pressed" from="ak47/ak47" to="." method="_on_ak_47_pressed"]
+[connection signal="pressed" from="auto/victor" to="." method="_on_victor_pressed"]
+[connection signal="pressed" from="shotgun/shotgun" to="." method="_on_shotgun_pressed"]
+[connection signal="pressed" from="pistol/pistol" to="." method="_on_pistol_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
