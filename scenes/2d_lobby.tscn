@@ -1,14 +1,17 @@
-[gd_scene load_steps=27 format=3 uid="uid://jaanlsapbams"]
+[gd_scene load_steps=30 format=3 uid="uid://jaanlsapbams"]
 
 [ext_resource type="Script" uid="uid://bbjyyet2rg1pw" path="res://scripts/2d_lobby.gd" id="1_uehbx"]
 [ext_resource type="Texture2D" uid="uid://ladwuasr466k" path="res://images/play.png" id="2_bqdny"]
-[ext_resource type="Texture2D" uid="uid://dop61qkneh16g" path="res://images/settngs.png" id="4_8v0ef"]
-[ext_resource type="Texture2D" uid="uid://c14ntriyow0y2" path="res://images/store (2).png" id="5_kgk10"]
+[ext_resource type="Texture2D" uid="uid://cflo65265bebn" path="res://images/chicken.png" id="4_n7t3t"]
+[ext_resource type="Texture2D" uid="uid://dknqbaq5yuwt" path="res://images/diamond_512dp_BB271A_FILL0_wght400_GRAD0_opsz48.png" id="5_r0p06"]
 [ext_resource type="AudioStream" uid="uid://diseapps8wxu1" path="res://sounds/click (mp3cut.net).mp3" id="6_cogy3"]
+[ext_resource type="Texture2D" uid="uid://dffbuv5pes4fd" path="res://images/gun.png" id="6_dctgn"]
 [ext_resource type="Texture2D" uid="uid://xu7hfn2gh5rv" path="res://images/sign in.png" id="6_uehbx"]
 [ext_resource type="Shader" uid="uid://tur1kfsijsto" path="res://scripts/gems.gdshader" id="7_327wv"]
 [ext_resource type="Texture2D" uid="uid://b3pps6fu1j15y" path="res://images/images-removebg-preview.png" id="8_5y6jp"]
 [ext_resource type="FontFile" uid="uid://cxyv6y6t14pc8" path="res://scripts/ComicRelief-Bold.ttf" id="9_5y6jp"]
+[ext_resource type="Texture2D" uid="uid://bbqg6neujlfnh" path="res://images/بدون عنوان.png" id="12_6bxuo"]
+[ext_resource type="Texture2D" uid="uid://bs7jt6ap8wmof" path="res://images/web.png" id="13_r0p06"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgk10"]
 size = Vector2(387.035, 170)
@@ -50,15 +53,12 @@ _data = {
 &"play pressed": SubResource("Animation_cogy3")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kgk10"]
-radius = 154.36
-
-[sub_resource type="Animation" id="Animation_r0p06"]
+[sub_resource type="Animation" id="Animation_5y6jp"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath("CanvasLayer/store:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -67,31 +67,270 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/play:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/TextureRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/sign in:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/TextureRect2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.39607844)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/store2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/guns:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="Animation" id="Animation_n7t3t"]
-resource_name = "settings pressed"
-length = 0.25
+[sub_resource type="Animation" id="Animation_uehbx"]
+resource_name = "fade in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath("CanvasLayer/store:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.442911, 0.442911, 0.442911, 1), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/play:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dctgn"]
+[sub_resource type="Animation" id="Animation_327wv"]
+resource_name = "fade out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/play:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/store:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/TextureRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/sign in:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/TextureRect2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.39607844), Color(0, 0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/store2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/guns:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5y6jp"]
 _data = {
-&"RESET": SubResource("Animation_r0p06"),
-&"settings pressed": SubResource("Animation_n7t3t")
+&"RESET": SubResource("Animation_5y6jp"),
+&"fade in": SubResource("Animation_uehbx"),
+&"fade out": SubResource("Animation_327wv")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8g6mr"]
+shader = ExtResource("7_327wv")
+shader_parameter/glow_intensity = 0.5
+shader_parameter/glow_speed = 2.0
+
+[sub_resource type="Animation" id="Animation_cjo5n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1040, 20)]
+}
+
+[sub_resource type="Animation" id="Animation_dctgn"]
+resource_name = "jumping"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1040, 20), Vector2(1040, -20), Vector2(1040, 20)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_isjer"]
+_data = {
+&"RESET": SubResource("Animation_cjo5n"),
+&"jumping": SubResource("Animation_dctgn")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cogy3"]
-radius = 128.51
+radius = 243.04
 
 [sub_resource type="Animation" id="Animation_lcsv8"]
 length = 0.001
@@ -130,135 +369,8 @@ _data = {
 &"store pressed": SubResource("Animation_6bxuo")
 }
 
-[sub_resource type="Animation" id="Animation_5y6jp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("settings:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("store:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("play:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_uehbx"]
-resource_name = "fade in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("settings:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("store:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("play:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_327wv"]
-resource_name = "fade out"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("play:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("settings:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("store:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5y6jp"]
-_data = {
-&"RESET": SubResource("Animation_5y6jp"),
-&"fade in": SubResource("Animation_uehbx"),
-&"fade out": SubResource("Animation_327wv")
-}
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8g6mr"]
-shader = ExtResource("7_327wv")
-shader_parameter/glow_intensity = 0.5
-shader_parameter/glow_speed = 2.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0p06"]
+size = Vector2(1900, 600)
 
 [node name="2D lobby" type="Control"]
 layout_mode = 3
@@ -269,81 +381,117 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uehbx")
 
-[node name="play" type="TouchScreenButton" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(870, 430)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="play" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(885.9998, 442.99997)
 scale = Vector2(0.58, 0.58)
 texture_normal = ExtResource("2_bqdny")
 shape = SubResource("RectangleShape2D_kgk10")
 
-[node name="play pressed" type="AnimationPlayer" parent="play"]
+[node name="play pressed" type="AnimationPlayer" parent="CanvasLayer/play"]
 libraries = {
 &"": SubResource("AnimationLibrary_sx4cg")
 }
 
-[node name="settings" type="TouchScreenButton" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(-15, -15)
-scale = Vector2(0.34, 0.34)
-texture_normal = ExtResource("4_8v0ef")
-shape = SubResource("CircleShape2D_kgk10")
-
-[node name="settings pressed" type="AnimationPlayer" parent="settings"]
-libraries = {
-&"": SubResource("AnimationLibrary_dctgn")
-}
-
-[node name="store" type="TouchScreenButton" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(90, -34.525)
-scale = Vector2(0.41, 0.41)
-texture_normal = ExtResource("5_kgk10")
-shape = SubResource("CircleShape2D_cogy3")
-
-[node name="store pressed" type="AnimationPlayer" parent="store"]
-libraries = {
-&"": SubResource("AnimationLibrary_cjo5n")
-}
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
 stream = ExtResource("6_cogy3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_5y6jp")
 }
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_top = 468.805
+[node name="sign in" type="Button" parent="CanvasLayer"]
+offset_top = 463.99997
 offset_right = 575.0
-offset_bottom = 916.805
+offset_bottom = 912.0
 scale = Vector2(0.4, 0.4)
 theme_override_font_sizes/font_size = 54
 icon = ExtResource("6_uehbx")
 flat = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_8g6mr")
-layout_mode = 0
-offset_left = 1040.0
-offset_right = 1265.0
-offset_bottom = 225.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_5y6jp")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 944.0
-offset_top = 17.0
-offset_right = 1136.0
-offset_bottom = 109.0
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 821.0
+offset_top = 2.0
+offset_right = 1157.0
+offset_bottom = 156.0
 theme_override_colors/font_color = Color(0.999859, 0.378156, 0.310218, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("9_5y6jp")
 theme_override_font_sizes/font_size = 65
 
-[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="store" to="." method="_on_store_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_8g6mr")
+offset_left = 1040.0
+offset_top = 20.0
+offset_right = 1265.0
+offset_bottom = 245.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_5y6jp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/TextureRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_isjer")
+}
+
+[node name="store" type="TouchScreenButton" parent="CanvasLayer"]
+visible = false
+position = Vector2(99, 569)
+scale = Vector2(0.14648435, 0.15039055)
+texture_normal = ExtResource("4_n7t3t")
+shape = SubResource("CircleShape2D_cogy3")
+
+[node name="store pressed" type="AnimationPlayer" parent="CanvasLayer/store"]
+libraries = {
+&"": SubResource("AnimationLibrary_cjo5n")
+}
+
+[node name="store2" type="TouchScreenButton" parent="CanvasLayer"]
+visible = false
+position = Vector2(4, 571)
+scale = Vector2(0.15625, 0.140625)
+texture_normal = ExtResource("5_r0p06")
+shape = SubResource("CircleShape2D_cogy3")
+
+[node name="store pressed" type="AnimationPlayer" parent="CanvasLayer/store2"]
+libraries = {
+&"": SubResource("AnimationLibrary_cjo5n")
+}
+
+[node name="guns" type="TouchScreenButton" parent="CanvasLayer"]
+visible = false
+position = Vector2(188, 571)
+scale = Vector2(0.15234378, 0.14257824)
+texture_normal = ExtResource("6_dctgn")
+shape = SubResource("CircleShape2D_cogy3")
+
+[node name="store pressed" type="AnimationPlayer" parent="CanvasLayer/guns"]
+libraries = {
+&"": SubResource("AnimationLibrary_cjo5n")
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+visible = false
+modulate = Color(0, 0, 0, 0.39607844)
+offset_left = 1.0
+offset_top = 569.0
+offset_right = 1016.0
+offset_bottom = 1112.0
+scale = Vector2(0.275, 0.145)
+texture = ExtResource("12_6bxuo")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(28.000015, -15.999999)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("13_r0p06")
+texture_pressed = ExtResource("13_r0p06")
+shape = SubResource("RectangleShape2D_r0p06")
+
+[connection signal="pressed" from="CanvasLayer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/sign in" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/store" to="." method="_on_store_pressed"]
+[connection signal="pressed" from="CanvasLayer/store2" to="." method="_on_store_pressed"]
+[connection signal="pressed" from="CanvasLayer/guns" to="." method="_on_guns_pressed"]
+[connection signal="pressed" from="CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
